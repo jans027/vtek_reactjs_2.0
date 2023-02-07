@@ -583,19 +583,19 @@ export const data = [{
         procedimiento: {
             id: 'DCbPUPVeTx',
             name: "Procedimiento quejas y apelaciones",
-            url: "public/documents/GV-FC-06-V1-Quejas-y-apelaciones.docx",
+            url: "GV_FC_06_V1_Quejas_y_apelaciones.docx",
             type: "Procedimiento quejas y apelaciones.docx"
         },
         formato: {
             id: 'WBSSrkUP3G',
             name: "Formato quejas y apelaciones",
-            url: "public/documents/GV-PC-03-V2-Quejas-y-apelaciones.pdf",
+            url: "../documents/GV_PC_03_V2_Quejas_y_apelaciones.pdf",
             type: "Formato quejas y apelaciones.pdf"
         },
         terminos: {
             id: 'wq_IcIZIHi',
             name: "Términos y condiciones",
-            url: "public/documents/GV-MC-01-V7-Términos-y-condiciones.pdf",
+            url: "../documents/GV_MC_01_V7_Términos_y_condiciones.pdf",
             type: "Términos y condiciones.pdf"
         },
     },

@@ -3,13 +3,10 @@
 import React, { useState } from 'react';
 import { data } from '../Data/data';
 import ModalForm from './ModalForm';
-// pdf
+// import documents pdf & docx
 import GV_MC_01_V7_Términos_y_condiciones from '../documents/GV_MC_01_V7_Términos_y_condiciones.pdf'
 import GV_FC_06_V1_Quejas_y_apelaciones from '../documents/GV_FC_06_V1_Quejas_y_apelaciones.docx'
 import GV_PC_03_V2_Quejas_y_apelaciones from '../documents/GV_PC_03_V2_Quejas_y_apelaciones.pdf'
-// GV-MC-01-V7-Términos-y-condiciones.pdf
-// GV-FC-06-V1-Quejas-y-apelaciones.docx
-// GV_PC_03_V2_Quejas_y_apelaciones.pdf
 
 
 
@@ -25,7 +22,11 @@ const BasicMenu = () => {
     // console.log(menus3)
 
     const [detalle, setDetalle] = useState([])
-    // console.log(detalle)
+    // console.log(consulta)
+
+    // desetructuracion profunda de objeto
+    // const [valide, procedimiento, formato, terminos] = menus3
+    // console.log(procedimiento.url)
 
 
 
@@ -62,7 +63,7 @@ const BasicMenu = () => {
         }
     }
 
-    
+
 
 
     return (
@@ -136,9 +137,7 @@ const BasicMenu = () => {
             <div id="droppin-wrapper" className="material bounce">
                 <p className='selector'>Consulta</p>
                 <div className="hidden">
-                    <ul
-                        id="droppin"
-                    >
+                    <ul id="droppin">
                         <li><ModalForm /></li>
                         <li>
                             <a
@@ -146,7 +145,7 @@ const BasicMenu = () => {
                                 target="_blank" 
                                 rel="noreferrer"
                             >
-                                Términos y condiciones
+                                Terminos y condiciones
                             </a>
                         </li>
                         <li>

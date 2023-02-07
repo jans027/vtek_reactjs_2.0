@@ -27,7 +27,7 @@ const ModalForm = () => {
 
     return (
         <div>
-            <a variant="outlined" onClick={handleClickOpen}>
+            <a className='enlace' variant="outlined" onClick={handleClickOpen}>
                 valide su certificado
             </a>
             <Dialog
