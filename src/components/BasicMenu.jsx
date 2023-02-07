@@ -1,8 +1,11 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
 import { data } from '../Data/data';
 import ModalForm from './ModalForm';
-
+// pdf
+import GV_MC_01_V7_Términos_y_condiciones from '../documents/GV_MC_01_V7_Términos_y_condiciones.pdf'
+// GV-MC-01-V7-Términos-y-condiciones.pdf
 
 const BasicMenu = () => {
 
@@ -10,7 +13,7 @@ const BasicMenu = () => {
     const { certificaciones, servicios, consulta, cotice } = datos
     const menus1 = Object.values(certificaciones)
     const menus2 = Object.values(servicios)
-    const menus3 = Object.values(consulta)
+    // const menus3 = Object.values(consulta)
     const menus4 = Object.values(cotice)
     // console.log(menus3)
 
@@ -51,6 +54,8 @@ const BasicMenu = () => {
                 break;
         }
     }
+
+    
 
 
     return (
@@ -128,7 +133,15 @@ const BasicMenu = () => {
                         id="droppin"
                     >
                         <li><ModalForm /></li>
-                        <li></li>
+                        <li>
+                            <a
+                                href={GV_MC_01_V7_Términos_y_condiciones}
+                                target="_blank" 
+                                rel="noreferrer"
+                            >
+                                prueba
+                            </a>
+                        </li>
                         <li></li>
                         <li></li>
                     </ul>
