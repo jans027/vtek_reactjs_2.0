@@ -5,12 +5,19 @@ import { data } from '../Data/data';
 import ModalForm from './ModalForm';
 // pdf
 import GV_MC_01_V7_Términos_y_condiciones from '../documents/GV_MC_01_V7_Términos_y_condiciones.pdf'
+import GV_FC_06_V1_Quejas_y_apelaciones from '../documents/GV_FC_06_V1_Quejas_y_apelaciones.docx'
+import GV_PC_03_V2_Quejas_y_apelaciones from '../documents/GV_PC_03_V2_Quejas_y_apelaciones.pdf'
 // GV-MC-01-V7-Términos-y-condiciones.pdf
+// GV-FC-06-V1-Quejas-y-apelaciones.docx
+// GV_PC_03_V2_Quejas_y_apelaciones.pdf
+
+
+
 
 const BasicMenu = () => {
 
     const [datos] = data
-    const { certificaciones, servicios, consulta, cotice } = datos
+    const { certificaciones, servicios,  cotice } = datos
     const menus1 = Object.values(certificaciones)
     const menus2 = Object.values(servicios)
     // const menus3 = Object.values(consulta)
@@ -139,11 +146,27 @@ const BasicMenu = () => {
                                 target="_blank" 
                                 rel="noreferrer"
                             >
-                                prueba
+                                Términos y condiciones
                             </a>
                         </li>
-                        <li></li>
-                        <li></li>
+                        <li>
+                        <a
+                                href={GV_FC_06_V1_Quejas_y_apelaciones}
+                                target="_blank" 
+                                rel="noreferrer"
+                            >
+                                Formato quejas y apelaciones
+                            </a>
+                        </li>
+                        <li>
+                        <a
+                                href={GV_PC_03_V2_Quejas_y_apelaciones}
+                                target="_blank" 
+                                rel="noreferrer"
+                            >
+                                Procedimiento quejas y apelaciones
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
