@@ -23,9 +23,34 @@ const Footer = () => {
     // console.log(detalle)
 
     const handleClick = (e) => {
-        const found = menus1.find(element => element.name === e.target.id )
-        setDetalle(found)
-        sessionStorage.setItem("element", JSON.stringify(found))
+
+        sessionStorage.clear()
+
+        switch (e.target.name) {
+            case "certificaciones":
+                const found = menus1.find(element => element.name === e.target.id)
+                setDetalle(found)
+                sessionStorage.setItem("element", JSON.stringify(found))
+                break;
+
+            case "servicios":
+                console.log('Ok servicios')
+                const found2 = menus2.find(element => element.name === e.target.id)
+                setDetalle(found2)
+                sessionStorage.setItem("element", JSON.stringify(found2))
+                break;
+
+            case "consulta":
+                console.log('Ok consulta')
+                break;
+
+            case "consulte":
+                console.log('Ok consulte')
+                break;
+
+            default:
+                break;
+        }
     }
 
 
@@ -36,15 +61,24 @@ const Footer = () => {
                 <h3>Certificaciones</h3>
                 {
                     menus1.map((item) =>
-                        <ul 
-                        id="droppin"
-                        key={item.id}
+                        <ul
+                            id="droppin"
+                            key={item.id}
                         >
-                            <li >
+                            <li
+                                key={item.name}
+                                onClick={(e) => handleClick(e)}
+                                id={item.name}
+                            >
                                 <a
-                                    id={item.name}
                                     onClick={(e) => handleClick(e)}
-                                    href="/Certificaciones">{item.name}
+                                    id={item.name}
+                                    href="/Certificaciones"
+                                    className='enlace'
+                                    key={item.id}
+                                    name="certificaciones"
+                                >
+                                    {item.name}
                                 </a>
                             </li>
                         </ul>
@@ -55,16 +89,26 @@ const Footer = () => {
                 <h3>Servicios</h3>
                 {
                     menus2.map((item) =>
-                        <ul 
-                        id="droppin"
-                        key={item.id}
+                        <ul
+                            id="droppin"
+                            key={item.id}
                         >
-                            <li >
-                                <a
+                            <li
+                                    key={item.name}
                                     id={item.name}
                                     onClick={(e) => handleClick(e)}
-                                    href={item.url}>{item.name}</a>
-                            </li>
+                                >
+                                    <a
+                                        onClick={(e) => handleClick(e)}
+                                        id={item.name}
+                                        href="/Servicios"
+                                        className='enlace'
+                                        key={item.id}
+                                        name="servicios"
+                                        >
+                                            {item.name}
+                                    </a>
+                                </li>
                         </ul>
                     )
                 }
@@ -73,9 +117,9 @@ const Footer = () => {
                 <h3>Consulta</h3>
                 {
                     menus3.map((item) =>
-                        <ul 
-                        id="droppin"
-                        key={item.id}
+                        <ul
+                            id="droppin"
+                            key={item.id}
                         >
                             <li >
                                 <a
@@ -91,9 +135,9 @@ const Footer = () => {
                 <h3>Cotice con nosotros</h3>
                 {
                     menus4.map((item) =>
-                        <ul 
-                        id="droppin"
-                        key={item.id}
+                        <ul
+                            id="droppin"
+                            key={item.id}
                         >
                             <li >
                                 <a
@@ -106,9 +150,9 @@ const Footer = () => {
                 }
             </div>
             <div className='direccionesFooter'>
-                    <a target="_blank" href={inicio.urlDireccion} rel="noreferrer" > <PlaceIcon /> {inicio.direccion} </a>
-                    <a href='/'> <PhoneIcon /> {inicio.telefono1} </a>
-                    <a target="_blank" href={inicio.urlTelefono2} rel="noreferrer" > <PhonelinkRingIcon /> {inicio.telefono2} </a>
+                <a target="_blank" href={inicio.urlDireccion} rel="noreferrer" > <PlaceIcon /> {inicio.direccion} </a>
+                <a href='/'> <PhoneIcon /> {inicio.telefono1} </a>
+                <a target="_blank" href={inicio.urlTelefono2} rel="noreferrer" > <PhonelinkRingIcon /> {inicio.telefono2} </a>
             </div>
         </footer>
     )

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { data } from '../Data/data';
+import ModalForm from './ModalForm';
 
 
 const BasicMenu = () => {
@@ -67,7 +68,8 @@ const BasicMenu = () => {
                                 value= {item.name}
                                 key= {item.id}
                                 >
-                                <li key={item.name}
+                                <li 
+                                    key={item.name}
                                     onClick={(e) => handleClick(e)}
                                     id={item.name}
                                 >
@@ -121,7 +123,15 @@ const BasicMenu = () => {
             <div id="droppin-wrapper" className="material bounce">
                 <p className='selector'>Consulta</p>
                 <div className="hidden">
-                    {
+                    <ul 
+                        id="droppin"
+                        >
+                        <li><ModalForm/></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    {/* {
                         menus3.map((item) =>
                             <ul 
                             id="droppin"
@@ -140,7 +150,7 @@ const BasicMenu = () => {
                                 </li>
                             </ul>
                         )
-                    }
+                    } */}
                 </div>
             </div>
             <div id="droppin-wrapper" className="material bounce">
