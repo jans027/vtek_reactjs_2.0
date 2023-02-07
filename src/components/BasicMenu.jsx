@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
 import { data } from '../Data/data';
 import ModalForm from './ModalForm';
@@ -21,30 +22,30 @@ const BasicMenu = () => {
 
 
     const handleClick = (e) => {
-        
+
         sessionStorage.clear()
 
         switch (e.target.name) {
             case "certificaciones":
-                const found = menus1.find(element => element.name === e.target.id )
+                const found = menus1.find(element => element.name === e.target.id)
                 setDetalle(found)
                 sessionStorage.setItem("element", JSON.stringify(found))
                 break;
-            
+
             case "servicios":
                 console.log('Ok servicios')
-                const found2 = menus2.find(element => element.name === e.target.id )
+                const found2 = menus2.find(element => element.name === e.target.id)
                 setDetalle(found2)
                 sessionStorage.setItem("element", JSON.stringify(found2))
                 break;
-        
+
             case "consulta":
                 console.log('Ok consulta')
-                    break;
+                break;
 
             case "consulte":
                 console.log('Ok consulte')
-                    break;
+                break;
 
             default:
                 break;
@@ -59,34 +60,34 @@ const BasicMenu = () => {
             </div>
             <div id="droppin-wrapper" className="material bounce">
                 <p className='selector'>Certificaciones</p>
-                <div  className="hidden">
+                <div className="hidden">
                     <React.Fragment key={datos.certificaciones}>
-                    {
-                        menus1.map((item) =>
-                            <ul 
-                                id="droppin"
-                                value= {item.name}
-                                key= {item.id}
+                        {
+                            menus1.map((item) =>
+                                <ul
+                                    id="droppin"
+                                    value={item.name}
+                                    key={item.id}
                                 >
-                                <li 
-                                    key={item.name}
-                                    onClick={(e) => handleClick(e)}
-                                    id={item.name}
-                                >
-                                    <a 
+                                    <li
+                                        key={item.name}
                                         onClick={(e) => handleClick(e)}
                                         id={item.name}
-                                        href="/Certificaciones"
-                                        className='enlace'
-                                        key={item.id}
-                                        name="certificaciones"
+                                    >
+                                        <a
+                                            onClick={(e) => handleClick(e)}
+                                            id={item.name}
+                                            href="/Certificaciones"
+                                            className='enlace'
+                                            key={item.id}
+                                            name="certificaciones"
                                         >
                                             {item.name}
-                                    </a>
-                                </li>
-                            </ul>
-                        )
-                    }
+                                        </a>
+                                    </li>
+                                </ul>
+                            )
+                        }
                     </React.Fragment>
                 </div>
             </div>
@@ -95,9 +96,9 @@ const BasicMenu = () => {
                 <div className="hidden">
                     {
                         menus2.map((item) =>
-                            <ul 
-                            id="droppin"
-                            key= {item.id}
+                            <ul
+                                id="droppin"
+                                key={item.id}
                             >
                                 <li
                                     key={item.name}
@@ -111,8 +112,8 @@ const BasicMenu = () => {
                                         className='enlace'
                                         key={item.id}
                                         name="servicios"
-                                        >
-                                            {item.name}
+                                    >
+                                        {item.name}
                                     </a>
                                 </li>
                             </ul>
@@ -123,34 +124,14 @@ const BasicMenu = () => {
             <div id="droppin-wrapper" className="material bounce">
                 <p className='selector'>Consulta</p>
                 <div className="hidden">
-                    <ul 
+                    <ul
                         id="droppin"
-                        >
-                        <li><ModalForm/></li>
+                    >
+                        <li><ModalForm /></li>
                         <li></li>
                         <li></li>
                         <li></li>
                     </ul>
-                    {/* {
-                        menus3.map((item) =>
-                            <ul 
-                            id="droppin"
-                            key= {item.id}
-                            >
-                                <li
-                                    key={item.name}
-                                    id={item.name}
-                                    onClick={(e) => handleClick(e)}
-                                >
-                                    <a
-                                        href={item.url}
-                                        // Target="_blank"
-                                        // download={item.url}
-                                        >{item.name}</a>
-                                </li>
-                            </ul>
-                        )
-                    } */}
                 </div>
             </div>
             <div id="droppin-wrapper" className="material bounce">
@@ -158,9 +139,9 @@ const BasicMenu = () => {
                 <div className="hidden">
                     {
                         menus4.map((item) =>
-                            <ul 
-                            id="droppin"
-                            key= {item.id}
+                            <ul
+                                id="droppin"
+                                key={item.id}
                             >
                                 <li
                                     key={item.name}

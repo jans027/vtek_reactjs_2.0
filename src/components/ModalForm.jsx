@@ -7,6 +7,12 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
+
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide transitionDuration="30000" direction="down" ref={ref} {...props} />;
+    });
 
 const ModalForm = () => {
     const [open, setOpen] = React.useState(false);
@@ -24,7 +30,11 @@ const ModalForm = () => {
             <a variant="outlined" onClick={handleClickOpen}>
                 Open form dialog
             </a>
-            <Dialog open={open} onClose={handleClose}>
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                TransitionComponent={Transition}
+                >
                 <DialogTitle>Subscribe</DialogTitle>
                 <DialogContent>
                     <DialogContentText>
