@@ -1,0 +1,94 @@
+@use "variables";
+
+.contBeneficios{
+    .firstText{
+        text-align: center;
+        color: variables.$terciario;
+        font-size: 1.8em;
+        padding: 1em 0 .5em 0;
+        @media(min-width:320px) and (max-width:600px) {
+            font-size: 1.2em;
+        }
+    }
+    .listBeneficios{
+        margin: auto;
+        width: 80%;
+        li{
+            color: variables.$primario80;
+            font-size: 1.2em;
+            @media(min-width:320px) and (max-width:600px) {
+                font-size: .9em;
+            }
+        }
+    }
+    .contCards{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 2em 0 2em 0;
+        @media(min-width:320px) and (max-width:830px) {
+            width: 80%;
+            margin: auto;
+        }
+        .cardsBeneficios{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 13em;
+            height: 18em;
+            margin: 1em 0;
+            @media(min-width:320px) and (max-width:600px) {
+                    width: 10em;
+                    height: 15em;
+                    .textImage{
+                        span{
+                            color: variables.$terciario;
+                            font-size: .7em;
+                            font-weight: 300;
+                        }
+                    }
+            }
+            .contImage{
+                width: 90%;
+                img{
+                    width: 100%;
+                    transition: transform .3s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .textImage{
+                span{
+                    color: variables.$terciario;
+                    font-size: 1.3em;
+                    font-weight: 900;
+                    padding: 0.8em 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,101 @@
+/* Colores Pagina */
+$basico: #ffffff;
+$primario: #20353a;
+$primario80: #20353a80;
+$primario60: #20353a60;
+$primario40: #20353a40;
+$primario20: #20353a20;
+$secundario: #2c4a99;
+$secundario80: #2c4a9980;
+$secundario60: #2c4a9960;
+$secundario40: #2c4a9940;
+$secundario20: #2c4a9920;
+$terciario: #61bead;
+$terciario80: #61bead80;
+$terciario60: #61bead60;
+$terciario40: #61bead40;
+$terciario20: #61bead20;
+
+/* FUENTE PRINCIPAL */
+$font-family: 'Poppins', sans-serif;
+
+
+/* Estilos Mixin */
+@mixin estilosLayout{
+        width: 100%;
+        height: 5em;
+        background-color: $primario;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+}
+
+@mixin boton{
+    color: $basico;
+    text-decoration: none;
+    background-color: $terciario;
+    padding: .4em 5em;
+    border-radius: .7em;
+    &:hover{
+        font-size: 105%;
+    }
+}
+
+@mixin bannersResponsive{
+    @media(min-width:1281px) and (max-width:2600px) {
+        .BannerPages1{
+            display: block;
+        }
+        .BannerPages2{
+            display: none;
+        }
+        .BannerPages3{
+            display: none;
+        }
+    }
+    @media(min-width:601px) and (max-width:1280px) {
+        .BannerPages1{
+            display: none;
+        }
+        .BannerPages2{
+            display: block;
+        }
+        .BannerPages3{
+            display: none;
+        }
+    }
+    @media(min-width:320px) and (max-width:600px) {
+        .BannerPages1{
+            display: none;
+        }
+        .BannerPages2{
+            display: none;
+        }
+        .BannerPages3{
+            display: block;
+        }
+    }
+}
+
+@mixin estiloBanners{
+    .BannerPages1,
+    .BannerPages2,
+    .BannerPages3
+    {
+        margin-top: 0 !important;
+        height: 38em;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+}
+
+
+
+
+

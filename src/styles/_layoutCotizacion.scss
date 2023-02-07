@@ -1,0 +1,52 @@
+@use 'variables';
+
+
+
+.layout1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background: variables.$terciario;
+    color: variables.$basico;
+    height: 6em;
+    padding: .2em 0;
+    font-family: variables.$font-family;
+    @media (max-width: 980px) {
+        margin: auto;
+        height: 10em;
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 80%;
+            text-align: center;
+            padding-bottom:.5em ;
+        }
+    }
+    @media (min-width:320px) and (max-width:600px) {
+        margin: auto;
+        height: 15em;
+    }
+    h4{
+        font-weight: 400;
+        font-size: 1.3em;
+    }
+    p{
+        font-size: 1em;
+    }
+    a{
+        padding: .4em 2.3em;
+        border-radius: .7em;
+        border: none;
+        color: variables.$basico;
+        background: variables.$primario; 
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-size: 1.2em;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}

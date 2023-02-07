@@ -1,0 +1,11 @@
+@use "variables";
+
+.layoutContacta {
+    @include variables.estilosLayout;
+    a {
+        @include variables.boton;
+        @media (max-width: 1050px) {
+            padding: .4em 4.3em;
+        }
+    }
+}
