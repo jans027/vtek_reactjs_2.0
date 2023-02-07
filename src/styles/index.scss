@@ -5,6 +5,16 @@
 @use 'landingPage';
 @use 'layoutCotizacion';
 @use 'seccionCertificaciones';
+@use 'layoutSolicitaCotizacion';
+@use 'swiper1';
+@use 'layoutSolicitud';
+@use 'layoutContacta';
+@use 'servicios';
+@use 'sliderBaners';
+@use 'certificaciones';
+@use 'serviciosLanding';
+@use'bannerBeneficios';
+@use'beneficiosyCobertura';
 
 // Navigation Bar...........................
 .contenedorNavBar{
