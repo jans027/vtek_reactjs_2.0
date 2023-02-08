@@ -154,20 +154,27 @@ const Footer = () => {
             <div>
                 <h3>Cotice con nosotros</h3>
                 {
-                    menus4.map((item) =>
-                        <ul
-                            id="droppin"
-                            key={item.id}
-                        >
-                            <li >
-                                <a
-                                    id={item.name}
-                                    onClick={(e) => handleClick(e)}
-                                    href="/#">{item.name}</a>
-                            </li>
-                        </ul>
-                    )
-                }
+                            menus4.map((item) =>
+                                <ul
+                                    id="droppin"
+                                    key={item.id}
+                                >
+                                    <li
+                                        id={item.name}
+                                        onClick={(e) => handleClick(e)}
+                                    >
+                                        <a
+                                            href={item.url}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            key={item.id}
+                                        >
+                                            {item.name}
+                                        </a>
+                                    </li>
+                                </ul>
+                            )
+                        }
             </div>
             <div className='direccionesFooter'>
                 <a target="_blank" href={inicio.urlDireccion} rel="noreferrer" > <PlaceIcon /> {inicio.direccion} </a>

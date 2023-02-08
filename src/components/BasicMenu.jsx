@@ -22,7 +22,7 @@ const BasicMenu = () => {
     // console.log(menus3)
 
     const [detalle, setDetalle] = useState([])
-    // console.log(consulta)
+    console.log(datos.inicio)
 
     // desetructuracion profunda de objeto
     // const [valide, procedimiento, formato, terminos] = menus3
@@ -172,23 +172,28 @@ const BasicMenu = () => {
             <div id="droppin-wrapper" className="material bounce">
                 <p className='selector'>Cotice Con Nosotros</p>
                 <div className="hidden">
-                    {
-                        menus4.map((item) =>
-                            <ul
-                                id="droppin"
-                                key={item.id}
-                            >
-                                <li
-                                    key={item.name}
-                                    id={item.name}
-                                    onClick={(e) => handleClick(e)}
+                {
+                            menus4.map((item) =>
+                                <ul
+                                    id="droppin"
+                                    key={item.id}
                                 >
-                                    <a
-                                        href={item.url}>{item.name}</a>
-                                </li>
-                            </ul>
-                        )
-                    }
+                                    <li
+                                        id={item.name}
+                                        onClick={(e) => handleClick(e)}
+                                    >
+                                        <a
+                                            href={item.url}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            key={item.id}
+                                        >
+                                            {item.name}
+                                        </a>
+                                    </li>
+                                </ul>
+                            )
+                        }
                 </div>
             </div>
             <div id="droppin-wrapper" className="material bounce">

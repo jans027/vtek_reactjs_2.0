@@ -5,8 +5,11 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { data } from '../Data/data';
-// visor de documentos 
-// import { Document } from 'react-pdf';
+// import documents pdf & docx
+import GV_MC_01_V7_Términos_y_condiciones from '../documents/GV_MC_01_V7_Términos_y_condiciones.pdf'
+import GV_FC_06_V1_Quejas_y_apelaciones from '../documents/GV_FC_06_V1_Quejas_y_apelaciones.docx'
+import GV_PC_03_V2_Quejas_y_apelaciones from '../documents/GV_PC_03_V2_Quejas_y_apelaciones.pdf'
+import ModalForm from './ModalForm';
 
 
 
@@ -16,7 +19,7 @@ export default function SimpleAccordion() {
     const { certificaciones, servicios, consulta, cotice } = datos
     const menus1 = Object.values(certificaciones)
     const menus2 = Object.values(servicios)
-    const menus3 = Object.values(consulta)
+    // const menus3 = Object.values(consulta)
     const menus4 = Object.values(cotice)
     // console.log(menus2)
 
@@ -159,22 +162,36 @@ export default function SimpleAccordion() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        {
-                            menus3.map((item) =>
-                                <ul id="droppin" key={item.id}>
-                                    <li
-                                        id={item.name}
-                                        onClick={(e) => handleClick(e)}
-                                    >
-                                        <a
-                                            href={item.url}
-                                            // Target="_blank"
-                                            download
-                                        >{item.name}</a>
-                                    </li>
-                                </ul>
-                            )
-                        }
+                        <ul id="droppin">
+                            <li><ModalForm /></li>
+                            <li>
+                                <a
+                                    href={GV_MC_01_V7_Términos_y_condiciones}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    Terminos y condiciones
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href={GV_FC_06_V1_Quejas_y_apelaciones}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    Formato quejas y apelaciones
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href={GV_PC_03_V2_Quejas_y_apelaciones}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    Procedimiento quejas y apelaciones
+                                </a>
+                            </li>
+                        </ul>
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -193,13 +210,22 @@ export default function SimpleAccordion() {
                     <Typography>
                         {
                             menus4.map((item) =>
-                                <ul id="droppin" key={item.id}>
+                                <ul
+                                    id="droppin"
+                                    key={item.id}
+                                >
                                     <li
                                         id={item.name}
                                         onClick={(e) => handleClick(e)}
                                     >
                                         <a
-                                            href={item.url}>{item.name}</a>
+                                            href={item.url}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            key={item.id}
+                                        >
+                                            {item.name}
+                                        </a>
                                     </li>
                                 </ul>
                             )

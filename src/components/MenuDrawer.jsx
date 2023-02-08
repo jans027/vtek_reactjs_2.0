@@ -1,10 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-// import PhoneIcon from '@mui/icons-material/Phone';
-// import PhonelinkRingIcon from '@mui/icons-material/PhonelinkRing';
-// import PlaceIcon from '@mui/icons-material/Place';
-// import component 👇
 import Drawer from 'react-modern-drawer'
 //import styles 👇
 import 'react-modern-drawer/dist/index.css'
@@ -17,8 +13,7 @@ const MenuDrawer = () => {
         setIsOpen((prevState) => !prevState)
     }
 
-    const [datos] = data
-    const { inicio } = datos
+    
 
 
 
