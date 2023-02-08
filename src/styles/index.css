@@ -388,6 +388,7 @@ section .carousel1 .cardsSwiper img {
 }
 .layoutSolicitud a:hover {
   font-size: 105%;
+  cursor: pointer;
 }
 
 .layoutContacta {
@@ -408,6 +409,7 @@ section .carousel1 .cardsSwiper img {
 }
 .layoutContacta a:hover {
   font-size: 105%;
+  cursor: pointer;
 }
 @media (max-width: 1050px) {
   .layoutContacta a {
