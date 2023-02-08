@@ -1,0 +1,33 @@
+@use 'variables';
+
+
+
+.containerMap {
+    // margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    background-color: variables.$primario20;
+    padding: 1.5em 0;
+    .containerAddress{
+        width: 40%;
+        border: 1px solid red;
+    }
+    .containerIframe{
+        border: 1px solid variables.$primario20;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
