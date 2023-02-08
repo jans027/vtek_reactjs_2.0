@@ -13,6 +13,7 @@ export const data = [{
         urlLinkedIn: "https://www.linkedin.com/company/grupo-vtek-s-a-s/",
         urlInstagram: "https://www.instagram.com/grupovtek/?hl=es",
         urlProcesos: "http://procesos.grupovtek.com/form#step-1",
+        urlIniciarSesion: "http://procesos.grupovtek.com/login#modal",
         srcUrl: "https://goo.gl/maps/GEJESAaxL13QsmkX8",
         banner: "../images/bannerIndex1600.jpg",
         tituloBanner1: "Queremos Ser",
@@ -704,3 +705,4 @@ export const data = [{
     },
 }]
 
+// 

@@ -14,7 +14,7 @@ import GV_PC_03_V2_Quejas_y_apelaciones from '../documents/GV_PC_03_V2_Quejas_y_
 const BasicMenu = () => {
 
     const [datos] = data
-    const { certificaciones, servicios,  cotice } = datos
+    const { certificaciones, servicios, cotice } = datos
     const menus1 = Object.values(certificaciones)
     const menus2 = Object.values(servicios)
     // const menus3 = Object.values(consulta)
@@ -22,7 +22,7 @@ const BasicMenu = () => {
     // console.log(menus3)
 
     const [detalle, setDetalle] = useState([])
-    // console.log(datos.inicio)
+    // console.log(datos.inicio.urlIniciarSesion)
 
     // desetructuracion profunda de objeto
     // const [valide, procedimiento, formato, terminos] = menus3
@@ -50,15 +50,7 @@ const BasicMenu = () => {
                 setDetalle(found2)
                 sessionStorage.setItem("element", JSON.stringify(found2))
                 break;
-
-            case "consulta":
-                console.log('Ok consulta')
-                break;
-
-            case "consulte":
-                console.log('Ok consulte')
-                break;
-
+                
             default:
                 break;
         }
@@ -143,25 +135,25 @@ const BasicMenu = () => {
                         <li>
                             <a
                                 href={GV_MC_01_V7_Términos_y_condiciones}
-                                target="_blank" 
+                                target="_blank"
                                 rel="noreferrer"
                             >
                                 Terminos y condiciones
                             </a>
                         </li>
                         <li>
-                        <a
+                            <a
                                 href={GV_FC_06_V1_Quejas_y_apelaciones}
-                                target="_blank" 
+                                target="_blank"
                                 rel="noreferrer"
                             >
                                 Formato quejas y apelaciones
                             </a>
                         </li>
                         <li>
-                        <a
+                            <a
                                 href={GV_PC_03_V2_Quejas_y_apelaciones}
-                                target="_blank" 
+                                target="_blank"
                                 rel="noreferrer"
                             >
                                 Procedimiento quejas y apelaciones
@@ -173,32 +165,39 @@ const BasicMenu = () => {
             <div id="droppin-wrapper" className="material bounce">
                 <p className='selector'>Cotice Con Nosotros</p>
                 <div className="hidden">
-                {
-                            menus4.map((item) =>
-                                <ul
-                                    id="droppin"
-                                    key={item.id}
+                    {
+                        menus4.map((item) =>
+                            <ul
+                                id="droppin"
+                                key={item.id}
+                            >
+                                <li
+                                    id={item.name}
+                                    onClick={(e) => handleClick(e)}
                                 >
-                                    <li
-                                        id={item.name}
-                                        onClick={(e) => handleClick(e)}
+                                    <a
+                                        href={item.url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        key={item.id}
                                     >
-                                        <a
-                                            href={item.url}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            key={item.id}
-                                        >
-                                            {item.name}
-                                        </a>
-                                    </li>
-                                </ul>
-                            )
-                        }
+                                        {item.name}
+                                    </a>
+                                </li>
+                            </ul>
+                        )
+                    }
                 </div>
             </div>
             <div id="droppin-wrapper" className="material bounce">
-                <a href="/" className='selector'>Iniciar Sesión</a>
+                <a
+                    href={datos.inicio.urlIniciarSesion}
+                    className='selector'
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    Iniciar Sesión
+                </a>
             </div>
         </div>
     );
