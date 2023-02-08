@@ -73,3 +73,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### `compilar sass
 sass --watch src/styles/index.scss src/styles/index.css
+### `compilar sass automaticamente
+<!-- arrancar compilacion en linea de comandos -->
+npm run scss
+<!-- anadir a package.json -->
+"scss": "sass --watch src/styles/index.scss src/styles/index.css"
