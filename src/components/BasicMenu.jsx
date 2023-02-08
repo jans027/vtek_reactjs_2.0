@@ -22,7 +22,7 @@ const BasicMenu = () => {
     // console.log(menus3)
 
     const [detalle, setDetalle] = useState([])
-    console.log(datos.inicio)
+    // console.log(datos.inicio)
 
     // desetructuracion profunda de objeto
     // const [valide, procedimiento, formato, terminos] = menus3
@@ -41,6 +41,7 @@ const BasicMenu = () => {
                 const found = menus1.find(element => element.name === e.target.id)
                 setDetalle(found)
                 sessionStorage.setItem("element", JSON.stringify(found))
+                console.log(found)
                 break;
 
             case "servicios":

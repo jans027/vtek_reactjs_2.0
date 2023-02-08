@@ -1111,6 +1111,7 @@ section .carousel1 .cardsSwiper img {
 }
 .logoPrincipal .menuBarraNav .material p:hover {
   color: #61bead;
+  border-bottom: 2px solid #2c4a99;
 }
 .logoPrincipal .menuBarraNav .material a {
   margin: 0 2em;
@@ -1122,6 +1123,9 @@ section .carousel1 .cardsSwiper img {
 .logoPrincipal .menuBarraNav .material a:hover {
   color: #61bead;
 }
+.logoPrincipal .menuBarraNav .material .hidden {
+  margin: -0.1em !important;
+}
 .logoPrincipal .menuBarraNav .material .hidden p {
   text-decoration: none;
   color: #2c4a99;
@@ -1130,6 +1134,7 @@ section .carousel1 .cardsSwiper img {
 }
 .logoPrincipal .menuBarraNav .material .hidden p:hover {
   color: #61bead;
+  border-bottom: 2px solid #2c4a99;
 }
 .logoPrincipal .menuBarraNav .material .hidden .enlace {
   color: white;

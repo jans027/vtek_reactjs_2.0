@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import { data } from '../Data/data';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -178,7 +179,7 @@ const Footer = () => {
             </div>
             <div className='direccionesFooter'>
                 <a target="_blank" href={inicio.urlDireccion} rel="noreferrer" > <PlaceIcon /> {inicio.direccion} </a>
-                <a href='/'> <PhoneIcon /> {inicio.telefono1} </a>
+                <a> <PhoneIcon /> {inicio.telefono1} </a>
                 <a target="_blank" href={inicio.urlTelefono2} rel="noreferrer" > <PhonelinkRingIcon /> {inicio.telefono2} </a>
             </div>
         </footer>

@@ -7,7 +7,8 @@ export const data = [{
         urlDireccion: "https://goo.gl/maps/DiUU57RDd7GgHVSq9",
         telefono1: "+57 601 597 5676",
         telefono2: "+57 318 639 6096",
-        urlTelefono2: "//api.whatsapp.com/send?phone=573186396096", // actualizar tambien data en (cotice/contacta/url)
+        // actualizar tambien data en (cotice/contacta/url)
+        urlTelefono2: "//api.whatsapp.com/send?phone=573186396096", 
         urlFacebook: "https://www.facebook.com/Grupo-Vtek-108195897565966",
         urlLinkedIn: "https://www.linkedin.com/company/grupo-vtek-s-a-s/",
         urlInstagram: "https://www.instagram.com/grupovtek/?hl=es",
@@ -608,7 +609,8 @@ export const data = [{
         contacta: {
             id: '9zxd7iK6Sw',
             name: "Contacta a un asesor",
-            url: "//api.whatsapp.com/send?phone=573186396096" //se utliza data de : (inicio/urlTelefono2)
+            //se utliza data de : (inicio/urlTelefono2)
+            url: "//api.whatsapp.com/send?phone=573186396096" 
         },
     },
     layoutCotizacion: {
