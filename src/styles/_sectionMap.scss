@@ -3,20 +3,75 @@
 
 
 .containerMap {
-    // margin: 1em 0;
     display: flex;
     justify-content: center;
     background-color: variables.$primario20;
     padding: 1.5em 0;
+    @media(min-width:1281px) and (max-width:2600px) {
+        
+    }
+    @media(min-width:601px) and (max-width:1280px) {
+        .containerAddress{
+            h2{
+                font-size: 1.7em !important;
+                margin-left: 0 !important;
+            }
+            span{
+                font-size: .4em;
+                width: 100% !important;
+                margin-left:0 !important;
+                font-size: 1em !important;
+            }
+        }
+        iframe{
+            width: 80% !important;
+        }
+    }
+    @media(min-width:320px) and (max-width:600px) {
+        display: flex;
+        flex-direction: column;
+        padding: 0 !important;
+        .containerAddress{
+            width: 100% !important ;
+            span{
+                font-size: .4em;
+                width: 100% !important;
+                margin-left:0 !important;
+                font-size: 1em !important;
+            }
+        }
+    }
     .containerAddress{
+        padding: 1.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
         width: 40%;
-        border: 1px solid red;
+        H2{
+            color: variables.$terciario;
+            width: 80%;
+            margin-left: 1em;
+            padding: .5em 0;
+            font-size: 2.4em;
+        }
+        span{
+            color: variables.$primario;
+            width: 80%;
+            margin-left: 1.8em;
+            padding: 1em 0;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            .MuiSvgIcon-root{
+                margin-right: .3em;
+            }
+        }
     }
     .containerIframe{
+        width: 40%;
         border: 1px solid variables.$primario20;
     }
 }
-
 
 
 

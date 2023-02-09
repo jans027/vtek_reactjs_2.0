@@ -1040,11 +1040,65 @@ section .carousel1 .cardsSwiper img {
   background-color: rgba(32, 53, 58, 0.1254901961);
   padding: 1.5em 0;
 }
+@media (min-width: 601px) and (max-width: 1280px) {
+  .containerMap .containerAddress h2 {
+    font-size: 1.7em !important;
+    margin-left: 0 !important;
+  }
+  .containerMap .containerAddress span {
+    font-size: 0.4em;
+    width: 100% !important;
+    margin-left: 0 !important;
+    font-size: 1em !important;
+  }
+  .containerMap iframe {
+    width: 80% !important;
+  }
+}
+@media (min-width: 320px) and (max-width: 600px) {
+  .containerMap {
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+  }
+  .containerMap .containerAddress {
+    width: 100% !important;
+  }
+  .containerMap .containerAddress span {
+    font-size: 0.4em;
+    width: 100% !important;
+    margin-left: 0 !important;
+    font-size: 1em !important;
+  }
+}
 .containerMap .containerAddress {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
   width: 40%;
-  border: 1px solid red;
+}
+.containerMap .containerAddress H2 {
+  color: #61bead;
+  width: 80%;
+  margin-left: 1em;
+  padding: 0.5em 0;
+  font-size: 2.4em;
+}
+.containerMap .containerAddress span {
+  color: #20353a;
+  width: 80%;
+  margin-left: 1.8em;
+  padding: 1em 0;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+}
+.containerMap .containerAddress span .MuiSvgIcon-root {
+  margin-right: 0.3em;
 }
 .containerMap .containerIframe {
+  width: 40%;
   border: 1px solid rgba(32, 53, 58, 0.1254901961);
 }
 
