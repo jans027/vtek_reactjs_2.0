@@ -1179,6 +1179,23 @@ section .carousel1 .cardsSwiper img {
 .cont_modal .MuiPaper-root .cont_information .cont_form .cont_form_mail form .form_btn:active {
   transform: scale(0.97);
 }
+.cont_modal .MuiPaper-root .cont_information .cont_form .cont_form_mail form .class_1 {
+  margin-bottom: 1em;
+  height: 2.8em;
+  border-radius: 0.5em;
+  border: 1px solid red;
+  padding: 0 0 0 0.5em;
+}
+.cont_modal .MuiPaper-root .cont_information .cont_form .cont_form_mail form .class_1::placeholder {
+  color: rgba(255, 0, 0, 0.623);
+}
+.cont_modal .MuiPaper-root .cont_information .cont_form .cont_form_mail form .class_1:focus {
+  border: 2px solid #61bead;
+  outline: none;
+}
+.cont_modal .MuiPaper-root .cont_information .cont_form .cont_form_mail form .class_1:focus::placeholder {
+  color: white;
+}
 
 .contenedorNavBar {
   position: fixed;
