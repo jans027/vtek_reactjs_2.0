@@ -1189,6 +1189,9 @@ section .carousel1 .cardsSwiper img {
 .cont_modal .MuiPaper-root .cont_information .cont_form .cont_form_mail form .class_1::placeholder {
   color: rgba(255, 0, 0, 0.623);
 }
+.cont_modal .MuiPaper-root .cont_information .cont_form .cont_form_mail form .class_1:not(:placeholder-shown):valid {
+  border: 1px solid rgba(32, 53, 58, 0.3764705882);
+}
 .cont_modal .MuiPaper-root .cont_information .cont_form .cont_form_mail form .class_1:focus {
   border: 2px solid #61bead;
   outline: none;

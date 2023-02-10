@@ -86,12 +86,16 @@
                     &::placeholder{
                         color: rgba(255, 0, 0, 0.623);
                     }
+                    &:not(:placeholder-shown):valid {
+                        border: 1px solid variables.$primario60;
+                    }
                     &:focus {
                         border: 2px solid variables.$terciario;
                         outline: none;
                         &::placeholder{
                             color: white;
                         }
+                        
                     }
                 }
             }
