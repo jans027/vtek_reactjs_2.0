@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+
+# mailjs keys
+.env REACT_APP_TEMPLATE_ID=TEMPLATE_ID  REACT_APP_SERVICE_ID=SERVICE_ID  REACT_APP_PUBLIC_KEY=API_PUBLIC_KEY
