@@ -18,22 +18,22 @@ const App = () => {
                 });
     };
     return (
-        <div>
-            <h1>Contact Form</h1>
+        <div className='cont_form_mail'>
             <form ref={form} onSubmit={sendEmail}>
-                <label>Nombre</label>
-                <input type="text" name="user_name" />
+                
+                <label className='form_label'>Nombre</label>
+                <input className='form_input' type="text" placeholder='Ingresa tu Nombre' name="user_name"  />
 
-                <label>Correo</label>
-                <input type="email" name="user_email" />
+                <label className='form_label'>Correo</label>
+                <input className='form_input' type="email" placeholder='Ingresa un correo valido' name="user_email" />
 
-                <label>Telefono</label>
-                <input type="tel" name="user_phone" />
+                <label className='form_label'>Telefono</label>
+                <input className='form_input' type="tel" placeholder='Ingresa tu telefono' name="user_phone" />
 
-                <label>Numero del Certificado</label>
-                <input type="tel" name="certificate_number" />
+                <label className='form_label'>Numero del Certificado</label>
+                <input className='form_input' type="tel" placeholder='Ingresa el numero del certificado' name="certificate_number" />
 
-                <input type="submit" value="Send" />
+                <input className='form_btn' type="submit" value="Enviar" />
             </form>
         </div>
     );

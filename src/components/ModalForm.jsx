@@ -1,15 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
+// import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+// import DialogActions from '@mui/material/DialogActions';
+// import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import App from './sendMail';
 import { data } from '../Data/data';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -40,21 +38,26 @@ const ModalForm = () => {
                 open={open}
                 onClose={handleClose}
                 TransitionComponent={Transition}
+                className='cont_modal'
             >
-                <DialogTitle onClick={handleClose}>X</DialogTitle>
-                <div>
-                    <div>
+                <div className='cont_close'>
+                    <span onClick={handleClose}> <CloseIcon/> </span>
+                </div>
+                <div className='cont_information'>
+                    <div className='cont_image'>
                         <img
                             className='imgBanner'
                             src={`./images/${image}`}
                             alt={image}
                         />
                     </div>
-                    <App />
+                    <div className='cont_form'>
+                        <App />
+                    </div>
                 </div>
-                <DialogActions>
+                {/* <DialogActions>
                     <Button onClick={handleClose}>Cancel</Button>
-                </DialogActions>
+                </DialogActions> */}
             </Dialog>
         </div>
     );
