@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, {  useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 
 const App = () => {
@@ -12,76 +12,77 @@ const App = () => {
 
 
     const [dataForm, setDataForm] = useState({
-        user_name: "",
-        user_email: "",
-        user_phone: "",
-        certificate_number: "",
+        name: "",
+        email: "",
+        phone: "",
+        certificate: "",
     })
 
     const handleChange = ({ target: { value, name } }) =>
         setDataForm({ ...dataForm, [name]: value })
 
     const form = useRef();
+    // console.log(form)
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+    const sendEmail = (event) => {
+        event.preventDefault();
 
         // regex input name
         const nameRegex = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/;
-        const isValidName = nameRegex.test(dataForm.user_name);
+        const isValidName = nameRegex.test(dataForm.name);
 
         // regex input email
         const emailRegex = /^(([^<>() [\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        const isValidEmail = emailRegex.test(dataForm.user_email);
+        const isValidEmail = emailRegex.test(dataForm.email);
 
         // regex input phone
         const phoneRegex = /^[0-9]+$/;
-        const isValidphone = phoneRegex.test(dataForm.user_phone)
+        const isValidphone = phoneRegex.test(dataForm.phone)
 
 
         if (
-            dataForm.user_name.trim() === "" ||
-            dataForm.user_name === null ||
-            dataForm.user_name.length === 0 ||
+            dataForm.name.trim() === "" ||
+            dataForm.name === null ||
+            dataForm.name.length === 0 ||
             isValidName !== true
         ) {
             setClassAlert('class_1');
             setPlaceholderText(false)
         } else if (
-            dataForm.user_email.trim() === "" ||
-            dataForm.user_email === null ||
-            dataForm.user_email.length === 0 ||
+            dataForm.email.trim() === "" ||
+            dataForm.email === null ||
+            dataForm.email.length === 0 ||
             isValidEmail !== true
         ) {
             setClassAlert('class_1');
 
         } else if (
-            dataForm.user_phone.trim() === "" ||
-            dataForm.user_phone === null ||
-            dataForm.user_phone.length === 0 ||
+            dataForm.phone.trim() === "" ||
+            dataForm.phone === null ||
+            dataForm.phone.length === 0 ||
             isValidphone !== true
         ) {
             setClassAlert('class_1');
 
         } else if (
-            dataForm.certificate_number.trim() === "" ||
-            dataForm.certificate_number === null ||
-            dataForm.certificate_number.length === 0 ||
+            dataForm.certificate.trim() === "" ||
+            dataForm.certificate === null ||
+            dataForm.certificate.length === 0 ||
             isValidphone !== true
         ) {
             setClassAlert('class_1');
 
         } else {
             setClassAlert('form_input');
-            console.log(dataForm)
+            // console.log(event.target)
             emailjs.sendForm(
-                process.env.REACT_APP_SERVICE_ID,
+                'service_niys5va',
                 process.env.REACT_APP_TEMPLATE_ID,
                 form.current,
-                process.env.REACT_APP_PUBLIC_KEY
+                'WJtijrAfr6hLGRh6P'
             )
                 .then((result) => {
-                    alert('message sent successfully...');
+                    alert('Mensaje enviado con exito...');
                     console.log(result.text);
                 },
                     (error) => {
@@ -104,7 +105,8 @@ const App = () => {
                     className={classAlert}
                     type="text"
                     placeholder={placeholderText === true ? 'Ingresa tu Nombre' : 'Datos incorrectos'}
-                    name="user_name"
+                    name="name"
+                    id="name"
                 />
 
                 <label className='form_label'>Correo</label>
@@ -113,7 +115,9 @@ const App = () => {
                     className={classAlert}
                     type="email"
                     placeholder={placeholderText === true ? 'Ingresa un correo valido' : 'Datos incorrectos'}
-                    name="user_email" />
+                    name="email" 
+                    id="email"
+                    />
 
                 <label className='form_label'>Telefono</label>
                 <input
@@ -121,7 +125,9 @@ const App = () => {
                     className={classAlert}
                     type="tel"
                     placeholder={placeholderText === true ? 'Ingresa tu telefono' : 'Datos incorrectos'}
-                    name="user_phone" />
+                    name="phone"
+                    id="phone"
+                    />
 
                 <label className='form_label'>Numero del Certificado</label>
                 <input
@@ -129,12 +135,15 @@ const App = () => {
                     className={classAlert}
                     type="tel"
                     placeholder={placeholderText === true ? 'Ingresa el numero del certificado' : 'Datos incorrectos'}
-                    name="certificate_number" />
+                    name="certificate" 
+                    id="certificate"
+                    />
 
                 <input
                     className='form_btn'
                     type="submit"
-                    value="Enviar" />
+                    value="Enviar" 
+                    />
             </form>
         </div>
     );
