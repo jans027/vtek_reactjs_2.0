@@ -1,23 +1,25 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import * as React from 'react';
+import  React, { useState } from 'react';
 // import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 // import DialogActions from '@mui/material/DialogActions';
 // import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
-import App from './sendMail';
 import { data } from '../Data/data';
 import CloseIcon from '@mui/icons-material/Close';
+import SendMail from './SendMail';
+
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide transitionDuration="30000" direction="down" ref={ref} {...props} />;
 });
 
-const ModalForm = () => {
+const ModalForm = (props) => {
 
-    const [datos] = data
-    const image = datos.inicio.imgVentanaModal;
+    //import data
+    const [datosInicio] = data
+    const image = datosInicio.inicio.imgVentanaModal;
 
     const [open, setOpen] = React.useState(false);
 
@@ -28,6 +30,9 @@ const ModalForm = () => {
     const handleClose = () => {
         setOpen(false);
     };
+    
+
+
 
     return (
         <div>
@@ -52,7 +57,7 @@ const ModalForm = () => {
                         />
                     </div>
                     <div className='cont_form'>
-                        <App />
+                        <SendMail />
                     </div>
                 </div>
                 {/* <DialogActions>

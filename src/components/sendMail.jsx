@@ -1,7 +1,11 @@
-import React, {  useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 
-const App = () => {
+
+
+
+
+const SendMail = () => {
 
     // dinamic class name
     const [classAlert, setClassAlert] = useState('form_input')
@@ -76,21 +80,23 @@ const App = () => {
             setClassAlert('form_input');
             // console.log(event.target)
             emailjs.sendForm(
-                'service_niys5va',
+                process.env.REACT_APP_SERVICE_ID,
                 process.env.REACT_APP_TEMPLATE_ID,
                 form.current,
-                'WJtijrAfr6hLGRh6P'
+                process.env.REACT_APP_PUBLIC_KEY
             )
                 .then((result) => {
-                    alert('Mensaje enviado con exito...');
                     console.log(result.text);
+                    // window.location.replace('');
+                    // window.location.reload(true);
+                    alert('Mensaje enviado con exito...');
+                    alert.confirm(window.location.reload(true))
                 },
                     (error) => {
-                        console.log(error.text);
+                        alert('Intenta mas tarde...');
+                        alert.confirm(window.location.reload(true))
                     });
         }
-
-
 
     };
 
@@ -115,9 +121,9 @@ const App = () => {
                     className={classAlert}
                     type="email"
                     placeholder={placeholderText === true ? 'Ingresa un correo valido' : 'Datos incorrectos'}
-                    name="email" 
+                    name="email"
                     id="email"
-                    />
+                />
 
                 <label className='form_label'>Telefono</label>
                 <input
@@ -127,7 +133,7 @@ const App = () => {
                     placeholder={placeholderText === true ? 'Ingresa tu telefono' : 'Datos incorrectos'}
                     name="phone"
                     id="phone"
-                    />
+                />
 
                 <label className='form_label'>Numero del Certificado</label>
                 <input
@@ -135,20 +141,20 @@ const App = () => {
                     className={classAlert}
                     type="tel"
                     placeholder={placeholderText === true ? 'Ingresa el numero del certificado' : 'Datos incorrectos'}
-                    name="certificate" 
+                    name="certificate"
                     id="certificate"
-                    />
+                />
 
                 <input
                     className='form_btn'
                     type="submit"
-                    value="Enviar" 
-                    />
+                    value="Enviar"
+                />
             </form>
         </div>
     );
 }
-export default App;
+export default SendMail;
 
 
 
