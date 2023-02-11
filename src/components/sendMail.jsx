@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser';
 
 const App = () => {
 
@@ -20,7 +21,6 @@ const App = () => {
     const handleChange = ({ target: { value, name } }) =>
         setDataForm({ ...dataForm, [name]: value })
 
-    const emailjs = "prueba"
     const form = useRef();
 
     const sendEmail = (e) => {
