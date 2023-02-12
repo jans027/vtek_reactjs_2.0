@@ -11,7 +11,8 @@ import GV_PC_03_V2_Quejas_y_apelaciones from '../documents/GV_PC_03_V2_Quejas_y_
 
 
 
-const BasicMenu = () => {
+
+const BasicMenu = (props) => {
 
     const [datos] = data
     const { certificaciones, servicios, cotice } = datos
@@ -23,6 +24,8 @@ const BasicMenu = () => {
 
     const [detalle, setDetalle] = useState([])
     // console.log(datos.inicio.urlIniciarSesion)
+    
+
 
     // desetructuracion profunda de objeto
     // const [valide, procedimiento, formato, terminos] = menus3
@@ -41,7 +44,7 @@ const BasicMenu = () => {
                 const found = menus1.find(element => element.name === e.target.id)
                 setDetalle(found)
                 sessionStorage.setItem("element", JSON.stringify(found))
-                console.log(found)
+                // console.log(found)
                 break;
 
             case "servicios":
@@ -55,9 +58,7 @@ const BasicMenu = () => {
                 break;
         }
     }
-
-
-
+    
 
     return (
         <div className='menuBarraNav'>
@@ -83,7 +84,7 @@ const BasicMenu = () => {
                                         <a
                                             onClick={(e) => handleClick(e)}
                                             id={item.name}
-                                            href="/Certificaciones"
+                                            href={`/Certificaciones_${item.id}`}
                                             className='enlace'
                                             key={item.id}
                                             name="certificaciones"
@@ -114,7 +115,7 @@ const BasicMenu = () => {
                                     <a
                                         onClick={(e) => handleClick(e)}
                                         id={item.name}
-                                        href="/Servicios"
+                                        href={`/Servicios_${item.id}`}
                                         className='enlace'
                                         key={item.id}
                                         name="servicios"
@@ -202,5 +203,7 @@ const BasicMenu = () => {
         </div>
     );
 }
+
+
 
 export default BasicMenu

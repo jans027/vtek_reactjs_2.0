@@ -79,7 +79,7 @@ const Footer = () => {
                                 <a
                                     onClick={(e) => handleClick(e)}
                                     id={item.name}
-                                    href="/Certificaciones"
+                                    href={`/Certificaciones_${item.id}`}
                                     className='enlace'
                                     key={item.id}
                                     name="certificaciones"
@@ -107,7 +107,7 @@ const Footer = () => {
                                 <a
                                     onClick={(e) => handleClick(e)}
                                     id={item.name}
-                                    href="/Servicios"
+                                    href={`/Servicios_${item.id}`}
                                     className='enlace'
                                     key={item.id}
                                     name="servicios"

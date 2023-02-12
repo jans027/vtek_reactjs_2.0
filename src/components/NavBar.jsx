@@ -25,9 +25,9 @@ const NavBar = () => {
 
     // console.log(inicio.img.logoPrincipal)
 
-    const handleClick = (e) => {
-        console.log(e.target)
-    }
+    // const handleClick = (e) => {
+    //     console.log(e.target)
+    // }
 
 
     return (
