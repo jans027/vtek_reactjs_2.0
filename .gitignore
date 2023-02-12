@@ -26,3 +26,11 @@ yarn-error.log*
 
 # mailjs keys
 .env 
+
+
+# carpetas de prooduccion
+/src
+
+
+
+
