@@ -83,6 +83,9 @@
                     border-radius: .5em;
                     border: 1px solid red;
                     padding: 0 0 0 .5em;
+                    input:invalid{
+                        animation: shake;
+                    }
                     &::placeholder{
                         color: rgba(255, 0, 0, 0.623);
                     }
@@ -96,6 +99,17 @@
                             color: white;
                         }
                         
+                    }
+                    @keyframes shake {
+                        25%{
+                            translate: 6px 0;
+                        }
+                        50%{
+                            translate: -6px 0;
+                        }
+                        75%{
+                            translate: -6px 0;
+                        }
                     }
                 }
             }
