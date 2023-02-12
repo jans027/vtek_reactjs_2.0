@@ -1,9 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import  React from 'react';
-// import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
-// import DialogActions from '@mui/material/DialogActions';
-// import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import { data } from '../Data/data';
 import CloseIcon from '@mui/icons-material/Close';
