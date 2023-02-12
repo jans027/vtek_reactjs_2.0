@@ -1,0 +1,47 @@
+@use 'variables';
+
+
+
+
+
+.container{
+    position: fixed;
+    bottom: 10dvh;
+    right: 8dvb;
+    cursor: pointer;
+    transition: 30ms;
+    &:hover{
+        transform: scale(1.1);
+    }
+    &:active{
+        transform: scale(.99);
+    }
+    @media(min-width:320px) and (max-width:600px) {
+        bottom: 10dvh;
+        right: 2dvb;
+    }
+    @media(min-width:601px) and (max-width:1000px) {
+        bottom: 10dvh;
+        right: 4dvb;
+    }
+}
+.floatingButton{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

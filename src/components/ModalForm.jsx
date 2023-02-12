@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import  React, { useState } from 'react';
+import  React from 'react';
 // import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 // import DialogActions from '@mui/material/DialogActions';
@@ -60,9 +60,6 @@ const ModalForm = (props) => {
                         <SendMail />
                     </div>
                 </div>
-                {/* <DialogActions>
-                    <Button onClick={handleClose}>Cancel</Button>
-                </DialogActions> */}
             </Dialog>
         </div>
     );

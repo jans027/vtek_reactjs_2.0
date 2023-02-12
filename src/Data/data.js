@@ -19,6 +19,7 @@ export const data = [{
         tituloBanner1: "Queremos Ser",
         subtituloBanner1: "¡La mejor opción para tu compañía!",
         imgVentanaModal:'VentanaModal.png',
+        imgBotonWhatsapp:'boton.png',
         parrafoBanner1: "Haciendo que nuestros servicios sean la mejor opción para la industria colombiana, convirtiéndonos en unos aliados estratégicos para todos los procesos de certificación en nuestro país. ",
         img: {
             logoPrincipal: "logo_vtek.png",

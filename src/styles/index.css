@@ -1200,6 +1200,39 @@ section .carousel1 .cardsSwiper img {
   color: white;
 }
 
+.container {
+  position: fixed;
+  bottom: 10dvh;
+  right: 8dvb;
+  cursor: pointer;
+  transition: 30ms;
+}
+.container:hover {
+  transform: scale(1.1);
+}
+.container:active {
+  transform: scale(0.99);
+}
+@media (min-width: 320px) and (max-width: 600px) {
+  .container {
+    bottom: 10dvh;
+    right: 2dvb;
+  }
+}
+@media (min-width: 601px) and (max-width: 1000px) {
+  .container {
+    bottom: 10dvh;
+    right: 4dvb;
+  }
+}
+
+.floatingButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0;
+}
+
 .contenedorNavBar {
   position: fixed;
   z-index: 100;

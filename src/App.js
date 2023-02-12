@@ -1,4 +1,5 @@
 import '../src/styles/app.scss';
+import BotonWhatsapp from './components/BotonWhatsapp';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import AppRoutes from './routes/AppRoutes';
@@ -10,6 +11,7 @@ function App() {
     <div>
       <NavBar/>
       <AppRoutes/>
+      <BotonWhatsapp/>
       <Footer/>
     </div>
   );
