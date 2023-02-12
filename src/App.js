@@ -1,4 +1,4 @@
-import '../src/styles/app.scss';
+import '../src/styles/App.scss';
 import BotonWhatsapp from './components/BotonWhatsapp';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
