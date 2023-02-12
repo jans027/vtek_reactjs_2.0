@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import LandingPage from "../components/LandingPage";
+// import { data } from "../Data/data";
 import Certificaciones from "../pages/Certificaciones";
 import Servicios from "../pages/Servicios";
+import BasicMenu from "../components/BasicMenu";
 
-const dataStorage = JSON.parse(sessionStorage.getItem("element", "value"))
 
 export const AppRoutes = () => {
 
-    console.log(dataStorage.id)
 
 
 
@@ -16,8 +16,9 @@ export const AppRoutes = () => {
         <BrowserRouter>
                     <Routes>
                         <Route path="/LandingPage" element={<LandingPage/>} />
-                        <Route path={`/Servicios_${dataStorage.id}`} element={<Servicios/>} />
-                        <Route path={`/Certificaciones_${dataStorage.id}`} element={<Certificaciones/>} />
+                        <Route path='/Servicios' element={<Servicios/>} />
+                        <Route path='/Certificaciones' element={<Certificaciones/>} />
+                        <Route element={<BasicMenu/>}/>
                         <Route path="*" element={<Navigate to="/LandingPage"/>}/> 
                     </Routes>
                 </BrowserRouter>

@@ -5,14 +5,11 @@ import LayoutSolicitud from '../components/LayoutSolicitud'
 import LayoutContacta from '../components/LayoutContacta'
 
 
-
 const Certificaciones = () => {
 
+    
 
-
-
-
-    const data = JSON.parse(sessionStorage.getItem("element", "value"))
+    const data = JSON.parse(localStorage.getItem("element", "value"))
 
     // desestructuracion datos de session storage
     const miniaturas = data.miniaturas

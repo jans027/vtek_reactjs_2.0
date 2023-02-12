@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { data } from '../Data/data'
 
 const Servicios = () => {
 
+    const [detalle, setDetalle] = useState([])
+
+
     const [datos] = data;
     const { servicios } = datos;
     const dataCard = Object.values(servicios);
+
+    const handleClick = (e) => {
+        localStorage.clear()
+
+        console.log('Ok servicios')
+        const found2 = dataCard.find(element => element.name === e.target.id)
+        if (found2 !== 0) {
+            console.log(found2, e.target)
+
+        }
+        setDetalle(found2)
+        localStorage.setItem("element", JSON.stringify(found2))
+    }
+
 
 
 
@@ -26,12 +43,29 @@ const Servicios = () => {
                                 <img src={`./images/${item.img}`} alt={item.name} />
                                 <div className='cardInformation'>
                                     <div>
-                                        <a href={item.url}>{item.tituloTarjeta}</a>
+                                        <a
+                                            onClick={(e) => handleClick(e)}
+                                            id={item.name}
+                                            href='/Servicios'
+                                            className='enlace'
+                                            key={item.id}
+                                            name="servicios"
+                                        >
+                                            {item.tituloTarjeta}</a>
                                     </div>
-                                            <p>{item.parrafo1}</p>
-                                            <p>{item.parrafo2}</p>
+                                    <p>{item.parrafo1}</p>
+                                    <p>{item.parrafo2}</p>
                                     <div>
-                                        <a className='enlaceVerMas' href={item.url}>Ver Mas</a>
+                                        <a
+                                            className='enlaceVerMas'
+                                            onClick={(e) => handleClick(e)}
+                                            id={item.name}
+                                            href='/Servicios'
+                                            key={item.id}
+                                            name="servicios"
+                                        >
+                                            Ver Mas
+                                        </a>
                                     </div>
                                 </div>
                             </div>

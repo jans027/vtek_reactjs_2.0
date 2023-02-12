@@ -151,7 +151,8 @@
         a {
             background: white;
         }
-        #droppin {
+        .droppin {
+            border: 1px solid red;
         ul:hover{
             // z-index: 999;
             background: variables.$terciario80;

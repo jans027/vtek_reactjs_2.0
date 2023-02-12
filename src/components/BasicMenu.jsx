@@ -12,6 +12,7 @@ import GV_PC_03_V2_Quejas_y_apelaciones from '../documents/GV_PC_03_V2_Quejas_y_
 
 
 
+
 const BasicMenu = (props) => {
 
     const [datos] = data
@@ -24,7 +25,9 @@ const BasicMenu = (props) => {
 
     const [detalle, setDetalle] = useState([])
     // console.log(datos.inicio.urlIniciarSesion)
-    
+    // return detalle;
+
+
 
 
     // desetructuracion profunda de objeto
@@ -35,30 +38,33 @@ const BasicMenu = (props) => {
 
 
 
+
+
+
     const handleClick = (e) => {
 
-        sessionStorage.clear()
+        localStorage.clear()
 
         switch (e.target.name) {
             case "certificaciones":
                 const found = menus1.find(element => element.name === e.target.id)
                 setDetalle(found)
-                sessionStorage.setItem("element", JSON.stringify(found))
-                // console.log(found)
+                localStorage.setItem("element", JSON.stringify(found))
+                console.log(found)
                 break;
 
             case "servicios":
                 console.log('Ok servicios')
                 const found2 = menus2.find(element => element.name === e.target.id)
                 setDetalle(found2)
-                sessionStorage.setItem("element", JSON.stringify(found2))
+                localStorage.setItem("element", JSON.stringify(found2))
                 break;
-                
+
             default:
                 break;
         }
     }
-    
+
 
     return (
         <div className='menuBarraNav'>
@@ -80,14 +86,14 @@ const BasicMenu = (props) => {
                                         key={item.name}
                                         onClick={(e) => handleClick(e)}
                                         id={item.name}
+                                        name="certificaciones"
                                     >
                                         <a
                                             onClick={(e) => handleClick(e)}
                                             id={item.name}
-                                            href={`/Certificaciones_${item.id}`}
-                                            className='enlace'
                                             key={item.id}
                                             name="certificaciones"
+                                            href='/Certificaciones'
                                         >
                                             {item.name}
                                         </a>
@@ -206,4 +212,7 @@ const BasicMenu = (props) => {
 
 
 
-export default BasicMenu
+export default BasicMenu;
+
+
+    

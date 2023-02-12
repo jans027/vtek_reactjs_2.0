@@ -11,7 +11,7 @@ import LayoutSolicitaCotizacion from '../components/LayoutSolicitaCotizacion';
 const Servicios = () => {
 
     // pidiendo datos al sessionStorage
-    const data = JSON.parse(sessionStorage.getItem("element", "value"))
+    const data = JSON.parse(localStorage.getItem("element", "value"))
 
     // desestructuracion datos de session storage
     const miniaturas = data.miniaturas

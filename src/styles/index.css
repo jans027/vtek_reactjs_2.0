@@ -1359,7 +1359,10 @@ section .carousel1 .cardsSwiper img {
 #droppin-wrapper.material a {
   background: white;
 }
-#droppin-wrapper.material #droppin ul:hover {
+#droppin-wrapper.material .droppin {
+  border: 1px solid red;
+}
+#droppin-wrapper.material .droppin ul:hover {
   background: rgba(97, 190, 173, 0.5019607843);
 }
 #droppin-wrapper a.selector {
