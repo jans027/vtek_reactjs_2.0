@@ -77,7 +77,7 @@
 }
 
 .containerPrincipalBaner1 {
-  background: url(/public/images/bannerIndex1600.jpg);
+  background-image: url(../assets/bannerIndex1600.jpg);
   background-size: cover;
   background-position: center;
   height: 34em;
@@ -1104,6 +1104,7 @@ section .carousel1 .cardsSwiper img {
 
 .cont_modal .MuiPaper-root {
   max-width: 1000px !important;
+  min-width: 350px;
 }
 .cont_modal .MuiPaper-root .cont_close {
   display: flex;
@@ -1128,6 +1129,28 @@ section .carousel1 .cardsSwiper img {
 }
 .cont_modal .MuiPaper-root .cont_information {
   display: flex;
+}
+@media (max-width: 630px) {
+  .cont_modal .MuiPaper-root .cont_information {
+    flex-direction: column;
+  }
+  .cont_modal .MuiPaper-root .cont_information img {
+    display: none;
+  }
+  .cont_modal .MuiPaper-root .cont_information .cont_form {
+    max-width: 100% !important;
+  }
+}
+@media (min-width: 631px) and (max-width: 850px) {
+  .cont_modal .MuiPaper-root .cont_information {
+    flex-direction: column;
+  }
+  .cont_modal .MuiPaper-root .cont_information img {
+    display: none;
+  }
+  .cont_modal .MuiPaper-root .cont_information .cont_form {
+    max-width: 100% !important;
+  }
 }
 .cont_modal .MuiPaper-root .cont_information .cont_image {
   width: 500px;

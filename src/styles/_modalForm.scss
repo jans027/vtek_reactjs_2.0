@@ -2,8 +2,10 @@
 
 
 .cont_modal{
+    
     .MuiPaper-root{
         max-width: 1000px !important;
+        min-width: 350px;
         .cont_close{
             display: flex;
             justify-content: flex-end;
@@ -28,6 +30,24 @@
         
         .cont_information{
             display: flex;
+            @media (max-width: 630px) {
+                flex-direction: column;
+                img{
+                    display: none;
+                }
+                .cont_form{
+                    max-width: 100%!important;
+                }
+            }
+            @media(min-width:631px) and (max-width:850px) {
+                flex-direction: column;
+                img{
+                    display: none;
+                }
+                .cont_form{
+                    max-width: 100%!important;
+                }
+            }
             .cont_image{
                 width: 500px;
                 overflow: hidden;
@@ -55,6 +75,7 @@
                     border-radius: .5em;
                     border: 1px solid variables.$primario60;
                     padding: 0 0 0 .5em;
+                    
                     &::placeholder{
                         color: variables.$primario;
                     }
