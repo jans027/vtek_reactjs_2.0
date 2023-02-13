@@ -2,6 +2,7 @@
   "name": "vtek_reactjs_2.0",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://jans027.github.io/vtek_reactjs_2.0",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.5",
@@ -25,7 +26,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "scss": "sass --watch src/styles/index.scss src/styles/index.css"
+    "scss": "sass --watch src/styles/index.scss src/styles/index.css",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
