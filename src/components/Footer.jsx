@@ -36,14 +36,14 @@ const Footer = () => {
             case "certificaciones":
                 const found = menus1.find(element => element.name === e.target.id)
                 setDetalle(found)
-                sessionStorage.setItem("element", JSON.stringify(found))
+                localStorage.setItem("element", JSON.stringify(found))
                 break;
 
             case "servicios":
                 console.log('Ok servicios')
                 const found2 = menus2.find(element => element.name === e.target.id)
                 setDetalle(found2)
-                sessionStorage.setItem("element", JSON.stringify(found2))
+                localStorage.setItem("element", JSON.stringify(found2))
                 break;
 
             case "consulta":
@@ -107,7 +107,7 @@ const Footer = () => {
                                 <a
                                     onClick={(e) => handleClick(e)}
                                     id={item.name}
-                                    href={`/Servicios_${item.id}`}
+                                    href='/Servicios'
                                     className='enlace'
                                     key={item.id}
                                     name="servicios"

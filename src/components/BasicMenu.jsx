@@ -121,7 +121,7 @@ const BasicMenu = (props) => {
                                     <a
                                         onClick={(e) => handleClick(e)}
                                         id={item.name}
-                                        href={`/Servicios_${item.id}`}
+                                        href='/Servicios'
                                         className='enlace'
                                         key={item.id}
                                         name="servicios"

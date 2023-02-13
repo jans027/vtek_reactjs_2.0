@@ -5,7 +5,7 @@ const BannerBeneficios = () => {
 
     const [datos] = data
     const banners = datos.inicio.bannerBeneficios
-    console.log(banners)
+    // console.log(banners)
 
 
     return (
