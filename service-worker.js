@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/vtek_reactjs_2.0/precache-manifest.45929df72d6c90efc98b1e76d5e59e5f.js"
+  "/vtek_reactjs_2.0/precache-manifest.7992ab4e24db7a843404a5d1238efafb.js"
 );
 
 workbox.clientsClaim();

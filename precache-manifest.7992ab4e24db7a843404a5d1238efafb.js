@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "b7742df233b0ed5cfdc0",
-    "url": "/vtek_reactjs_2.0/static/css/main.eb42fb74.chunk.css"
+    "revision": "df2984d395d001c74145",
+    "url": "/vtek_reactjs_2.0/static/css/main.ff8a43bf.chunk.css"
   },
   {
-    "revision": "b7742df233b0ed5cfdc0",
-    "url": "/vtek_reactjs_2.0/static/js/main.b7742df2.chunk.js"
+    "revision": "df2984d395d001c74145",
+    "url": "/vtek_reactjs_2.0/static/js/main.df2984d3.chunk.js"
   },
   {
     "revision": "f87585fc3cf030a93673",
@@ -32,23 +32,27 @@ self.__precacheManifest = [
     "url": "/vtek_reactjs_2.0/static/media/GV_PC_03_V2_Quejas_y_apelaciones.25ae1e34.pdf"
   },
   {
-    "revision": "ced611daf7709cc778da928fec876475",
-    "url": "/vtek_reactjs_2.0/static/media/slick.ced611da.eot"
+    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
+    "url": "/vtek_reactjs_2.0/static/media/slick.b7c9e1e4.woff"
   },
   {
     "revision": "d41f55a78e6f49a5512878df1737e58a",
     "url": "/vtek_reactjs_2.0/static/media/slick.d41f55a7.ttf"
   },
   {
-    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
-    "url": "/vtek_reactjs_2.0/static/media/slick.b7c9e1e4.woff"
+    "revision": "ced611daf7709cc778da928fec876475",
+    "url": "/vtek_reactjs_2.0/static/media/slick.ced611da.eot"
   },
   {
     "revision": "f97e3bbf73254b0112091d0192f17aec",
     "url": "/vtek_reactjs_2.0/static/media/slick.f97e3bbf.svg"
   },
   {
-    "revision": "32dd9f90c21708cbe44aa9d4a3616ce8",
+    "revision": "e57d4398632f9312b728f68bd9c190ab",
+    "url": "/vtek_reactjs_2.0/static/media/bannerIndex1600.e57d4398.jpg"
+  },
+  {
+    "revision": "8a50750e89b8c6c9832d94e152c2aab4",
     "url": "/vtek_reactjs_2.0/index.html"
   }
 ];
