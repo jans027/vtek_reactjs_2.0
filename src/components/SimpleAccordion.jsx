@@ -94,7 +94,7 @@ export default function SimpleAccordion() {
                                         <a
                                             onClick={(e) => handleClick(e)}
                                             id={item.name}
-                                            href={`/Certificaciones_${item.id}`}
+                                            href='/Certificaciones'
                                             key={item.id}
                                             name="certificaciones"
                                         >
@@ -135,7 +135,7 @@ export default function SimpleAccordion() {
                                         <a
                                             onClick={(e) => handleClick(e)}
                                             id={item.name}
-                                            href={`/Servicios_${item.id}`}
+                                            href='/Servicios'
                                             key={item.id}
                                             name="servicios"
                                         >

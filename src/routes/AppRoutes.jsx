@@ -16,9 +16,9 @@ export const AppRoutes = () => {
         <BrowserRouter>
                     <Routes>
                         <Route path="/LandingPage" element={<LandingPage/>} />
+                        <Route element={<BasicMenu/>}/>
                         <Route path='/Servicios' element={<Servicios/>} />
                         <Route path='/Certificaciones' element={<Certificaciones/>} />
-                        <Route element={<BasicMenu/>}/>
                         <Route path="*" element={<Navigate to="/LandingPage"/>}/> 
                     </Routes>
                 </BrowserRouter>

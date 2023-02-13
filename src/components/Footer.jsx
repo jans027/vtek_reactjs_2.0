@@ -79,7 +79,7 @@ const Footer = () => {
                                 <a
                                     onClick={(e) => handleClick(e)}
                                     id={item.name}
-                                    href={`/Certificaciones_${item.id}`}
+                                    href='/Certificaciones'
                                     className='enlace'
                                     key={item.id}
                                     name="certificaciones"
