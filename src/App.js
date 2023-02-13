@@ -1,4 +1,4 @@
-// import '../src/styles/index.scss';
+import React, { Component } from 'react';
 import BotonWhatsapp from './components/BotonWhatsapp';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
