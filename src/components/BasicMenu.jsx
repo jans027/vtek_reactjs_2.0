@@ -13,7 +13,8 @@ import GV_PC_03_V2_Quejas_y_apelaciones from '../documents/GV_PC_03_V2_Quejas_y_
 
 
 
-const BasicMenu = (props) => {
+function BasicMenu  () {
+
 
     const [datos] = data
     const { certificaciones, servicios, cotice } = datos
@@ -27,30 +28,20 @@ const BasicMenu = (props) => {
     // console.log(datos.inicio.urlIniciarSesion)
     // return detalle;
 
-
-
-
     // desetructuracion profunda de objeto
     // const [valide, procedimiento, formato, terminos] = menus3
     // console.log(procedimiento.url)
 
 
-
-
-
-
-
-
     const handleClick = (e) => {
 
-        localStorage.clear()
 
+        localStorage.clear()
         switch (e.target.name) {
             case "certificaciones":
                 const found = menus1.find(element => element.name === e.target.id)
                 setDetalle(found)
                 localStorage.setItem("element", JSON.stringify(found))
-                console.log(found)
                 break;
 
             case "servicios":
@@ -93,7 +84,7 @@ const BasicMenu = (props) => {
                                             id={item.name}
                                             key={item.id}
                                             name="certificaciones"
-                                            href='/Certificaciones'
+                                            href={item.url}
                                         >
                                             {item.name}
                                         </a>

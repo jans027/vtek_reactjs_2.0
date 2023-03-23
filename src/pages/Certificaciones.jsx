@@ -5,16 +5,16 @@ import LayoutSolicitud from '../components/LayoutSolicitud'
 import LayoutContacta from '../components/LayoutContacta'
 
 
-const Certificaciones = () => {
+function Certificaciones  ({match})  {
 
-    
+    // console.log(match.params.id)
 
     const data = JSON.parse(localStorage.getItem("element", "value"))
+    console.log(data)
 
     // desestructuracion datos de session storage
     const miniaturas = data.miniaturas
     const img = Object.values(miniaturas);
-    // console.log(img)
 
 
 
@@ -36,6 +36,7 @@ const Certificaciones = () => {
                     <h5 className='texto3'>{data.texto3}</h5>
                     <h6 className='texto4'>{data.texto4}</h6>
                 </div>
+                {/* <h1>{match.params.id}</h1> */}
                 <h5 className='tituloSeccion'>Productos que certificamos</h5>
                 <div className='cardCertificaciones'>
                     {
@@ -59,4 +60,4 @@ const Certificaciones = () => {
     )
 }
 
-export default Certificaciones
+export default Certificaciones;

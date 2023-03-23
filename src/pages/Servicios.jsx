@@ -12,6 +12,7 @@ const Servicios = () => {
 
     // pidiendo datos al sessionStorage
     const data = JSON.parse(localStorage.getItem("element", "value"))
+    console.log(data)
 
     // desestructuracion datos de session storage
     const miniaturas = data.miniaturas
