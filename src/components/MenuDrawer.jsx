@@ -8,15 +8,11 @@ import SimpleAccordion from './SimpleAccordion';
 import { data } from '../Data/data';
 
 const MenuDrawer = () => {
+    
     const [isOpen, setIsOpen] = React.useState(false)
     const toggleDrawer = () => {
         setIsOpen((prevState) => !prevState)
     }
-
-    
-
-
-
 
     return (
         <>

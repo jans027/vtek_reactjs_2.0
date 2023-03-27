@@ -8,11 +8,6 @@ import GV_MC_01_V7_Términos_y_condiciones from '../documents/GV_MC_01_V7_Térmi
 import GV_FC_06_V1_Quejas_y_apelaciones from '../documents/GV_FC_06_V1_Quejas_y_apelaciones.docx'
 import GV_PC_03_V2_Quejas_y_apelaciones from '../documents/GV_PC_03_V2_Quejas_y_apelaciones.pdf'
 
-
-
-
-
-
 function BasicMenu  () {
 
 
@@ -200,10 +195,4 @@ function BasicMenu  () {
         </div>
     );
 }
-
-
-
 export default BasicMenu;
-
-
-    
